@@ -1,56 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>@woahdae</title>
-
-    <style type="text/css">
-      {% include_relative css/critical.css %}
-    </style>
-  </head>
+  {% include head.html %}
 
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="d-none d-md-block col-md-3" style="border: 1px solid black">
-          left container
-        </div>
 
-        <div class="col-12 col-md-9">
-          {{ content }}
-        </div>
-      </div>
+    {% include sidebar.html %}
+
+    <div class="container content">
+      <main>
+        {{ content }}
+      </main>
     </div>
 
-    <noscript id="deferred-styles">
-      <link rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-            integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-            crossorigin="anonymous"
-      />
-      <link rel="stylesheet" type="text/css" href="css/default.css"/>
-    </noscript>
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
   </body>
-
 </html>

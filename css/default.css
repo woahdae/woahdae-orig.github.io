@@ -1,0 +1,11 @@
+.col-full-height {
+  height: 100vh;
+}
+
+.content {
+  overflow: auto;
+}
+
+.drawer {
+  background-color: rgb(32, 32, 32);
+}
