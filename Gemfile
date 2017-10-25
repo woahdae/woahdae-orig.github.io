@@ -8,10 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.6.2"
-
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "jekyll-theme-hydejack", "~> 7.0"
+gem "jekyll", "~> 3.6"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -19,13 +16,19 @@ gem "jekyll-theme-hydejack", "~> 7.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-paginate"
-  gem "jekyll-relative-links"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
+  # gem "jekyll-avatar", "~> 0.5"
+  # gem "jekyll-default-layout", "~> 0.1"
+  gem "jekyll-feed", "~> 0.9"
+  # gem "jekyll-gist", "~> 1.4"
+  # gem "jekyll-optional-front-matter", "~> 0.2"
+  gem "jekyll-paginate", "~> 1.1"
+  # gem "jekyll-readme-index", "~> 0.1"
+  # gem "jekyll-redirect-from", "~> 0.12"
+  gem "jekyll-relative-links", git: "git@github.com:qwtel/jekyll-relative-links.git", branch: "fix"
+  gem "jekyll-seo-tag", "~> 2.3"
+  gem "jekyll-sitemap", "~> 1.1"
+  # gem "jekyll-titles-from-headings", "~> 0.4"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-

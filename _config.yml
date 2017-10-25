@@ -2,7 +2,6 @@
 # ========================================================================================
 
 title:                 '@woahdae'
-theme:                 'jekyll-theme-hydejack'
 
 # Language of your content in 2-letter code, eg: en, de.
 # You may also provide a location, eg: en-us, de_AT.
@@ -175,7 +174,6 @@ plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-data
   # - jekyll-titles-from-headings
 
 
