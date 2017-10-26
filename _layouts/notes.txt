@@ -1,5 +1,0 @@
-inspiration:
-
-http://hyde.getpoole.com/
-http://jdwallace12.github.io/pixyllated/
-https://qwtel.com/hydejack/2017/07/27/gems/

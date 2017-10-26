@@ -1,0 +1,38 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+.sidebar {
+  background-color: #b9c9d0;
+}
+
+/* About section */
+.sidebar-about h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2.25rem;
+}
+
+footer {
+  text-align: center;
+  color: #999999;
+}
+
+@media (min-width: 64em) {
+  .content, footer {
+    margin-left: 20rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    width: 16rem;
+  }
+
+  .content, footer {
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+  }
+}
