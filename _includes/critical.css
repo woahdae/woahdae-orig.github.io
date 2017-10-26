@@ -87,20 +87,17 @@ code {
   margin-right: auto;
 }
 
-.post {
+article {
   margin-bottom: 4em;
 }
 
-.post li+li {
+article li+li {
   margin-top: .25rem;
 }
 
-.post-title,
-.post-title a {
+.title,
+.title a {
   color: #303030;
-}
-
-.post-title {
   margin-top: 0;
 }
 
