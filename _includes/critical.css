@@ -230,3 +230,22 @@ html {
     margin-right: 2rem;
   }
 }
+
+.social-links svg {
+  height: 2rem;
+  fill: rgba(255,255,255,.9);
+}
+
+.inline-list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.inline-list li {
+  float: left;
+  padding-right: 20px;
+}
+.inline-list li:last-child {
+  padding-right: 0px;
+}
