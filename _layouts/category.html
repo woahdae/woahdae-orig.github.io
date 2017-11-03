@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% if page.content != empty %}
+    <p>
+      {{ page.content }}
+    </p>
+
+    <hr />
+  {% endif %}
+
+  {% for post in site.categories[page.category] %}
+  <article>
+    <h1 class="title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <div class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+    </div>
+
+    {{ post.excerpt }}
+
+    <a href="{{ site.baseurl }}{{ post.url }}">Continue reading &rArr;</a>
+  </article>
+  {% endfor %}
+</div>
+

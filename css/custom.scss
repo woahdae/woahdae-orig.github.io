@@ -48,13 +48,13 @@
   font-size: 2.25rem;
 }
 
-footer {
+body > footer {
   text-align: center;
   color: #999999;
 }
 
 @media (min-width: 64em) {
-  .content, footer {
+  .content, body > footer {
     margin-left: 20rem;
     margin-right: 4rem;
   }
@@ -65,7 +65,7 @@ footer {
     width: 16rem;
   }
 
-  .content, footer {
+  .content, body > footer {
     max-width: 38rem;
     margin-left: 20rem;
     margin-right: 2rem;

@@ -101,7 +101,7 @@ article li+li {
   margin-top: 0;
 }
 
-.post-date {
+.post-meta {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
@@ -155,11 +155,6 @@ html {
 
 .sidebar-nav {
   margin-bottom: 1rem;
-}
-
-.sidebar-nav-item {
-  display: block;
-  line-height: 1.75;
 }
 
 .sidebar-nav-item.active {
@@ -245,4 +240,12 @@ html {
 }
 .inline-list li:last-child {
   padding-right: 0px;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
 }

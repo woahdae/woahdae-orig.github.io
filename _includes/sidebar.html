@@ -3,23 +3,15 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1><a href="{{ homeurl }}" title="Home">{{ site.title }}</a></h1>
-      <p class="lead">{{ site.description }}</p>
+      <nav class="sidebar-nav lead">
+        {% assign sections = "bikes,soil,tech,etc" | split: ',' %}
+        {% for section in sections %}
+          <a class="sidebar-nav-item{% if page.category == section %} active{% endif %}"
+            href="/{{ section }}">
+            {{ section }}</a>{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+      </nav>
     </div>
-
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == homeurl %} active{% endif %}" href="{{ homeurl }}">Home</a>
-
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% for node in site.pages %}
-        {% if node.title != null and node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
 
     <ul class="social-links inline-list">
       <li>
