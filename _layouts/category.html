@@ -13,11 +13,14 @@ layout: default
 
   {% for post in site.categories[page.category] %}
   <article>
-    <h1 class="title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
+    <a style="position: relative" href="{{ site.baseurl }}{{ post.url }}">
+      {% if post.img %}
+      <img class="post-image" src="/img/{{ post.img }}" />
+      {% endif %}
+      <h1 class="title{% if post.img %} title-with-img{% endif %}">
         {{ post.title }}
-      </a>
-    </h1>
+      </h1>
+    </a>
 
     <div class="post-meta">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>

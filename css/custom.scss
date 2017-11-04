@@ -56,22 +56,3 @@ body > footer {
   text-align: center;
   color: #999999;
 }
-
-@media (min-width: 64em) {
-  .content, body > footer {
-    margin-left: 20rem;
-    margin-right: 4rem;
-  }
-}
-
-@media (min-width: 48em) {
-  .sidebar {
-    width: 16rem;
-  }
-
-  .content, body > footer {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
-  }
-}
