@@ -11,6 +11,7 @@
             {{ section }}</a>{% if forloop.last == false %}, {% endif %}
         {% endfor %}
       </nav>
+      <p>{{ site.tagline }}</p>
     </div>
 
     <ul class="social-links inline-list">
@@ -32,6 +33,11 @@
       <li>
         <a href="https://www.instagram.com/earthling104b/">
           {% include icons/instagram.svg %}
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/woody-peterson">
+          {% include icons/linkedin.svg %}
         </a>
       </li>
     </ul>
