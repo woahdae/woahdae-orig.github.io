@@ -1,3 +1,9 @@
+/* Duplication between this and the non-critical theme files has been removed,
+ * which makes things weird from an implementation/maintenance perspective,
+ * but good from a UX perspective since there is no opportunity for rendering
+ * jitter
+ */
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,12 +17,18 @@ body {
 }
 
 html {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
 @media (min-width: 38em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 58em) {
   html {
     font-size: 20px;
   }
@@ -35,7 +47,11 @@ a {
 }
 
 h1,
-h3 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: .5rem;
   font-weight: 600;
   line-height: 1.25;
@@ -57,7 +73,9 @@ p {
   margin-bottom: 1rem;
 }
 
-ul {
+ul,
+ol,
+dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -67,7 +85,8 @@ ul {
   font-weight: 300;
 }
 
-code {
+code,
+pre {
   font-family: Menlo,Monaco,"Courier New",monospace;
 }
 
@@ -108,21 +127,12 @@ article li+li {
   color: #9a9a9a;
 }
 
-html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-}
-
-@media (min-width: 48em) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 58em) {
-  html {
-    font-size: 20px;
-  }
-}
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
 
 .sidebar {
   text-align: center;
@@ -142,10 +152,12 @@ html {
   }
 }
 
+/* Sidebar links */
 .sidebar a {
   color: #fff;
 }
 
+/* About section */
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
@@ -153,13 +165,16 @@ html {
   font-size: 3.25rem;
 }
 
-.sidebar-nav {
-  margin-bottom: 1rem;
-}
-
+/* Sidebar nav */
 .sidebar-nav-item.active {
   font-weight: bold;
 }
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
 
 @media (min-width: 48em) {
   .sidebar-sticky {
@@ -204,10 +219,19 @@ html {
   font-size: 2.25rem;
 }
 
+.social-links svg {
+  height: 1.5rem;
+  fill: rgba(255,255,255,.9);
+}
+
 @media (min-width: 64em) {
   .content {
     margin-left: 20rem;
     margin-right: 4rem;
+  }
+
+  .social-links svg {
+    height: 1.7rem;
   }
 }
 
@@ -221,11 +245,6 @@ html {
     margin-left: 20rem;
     margin-right: 2rem;
   }
-}
-
-.social-links svg {
-  height: 2rem;
-  fill: rgba(255,255,255,.9);
 }
 
 .inline-list {
