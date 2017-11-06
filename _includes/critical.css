@@ -212,7 +212,7 @@ article li+li {
   }
 
   .content, body > footer {
-    max-width: 38rem;
+    max-width: 40rem;
     margin-left: 18rem;
     margin-right: 2rem;
   }
@@ -288,3 +288,4 @@ hr {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #fff;
 }
+
