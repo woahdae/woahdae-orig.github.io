@@ -2,7 +2,7 @@
 layout: post
 title:  "Living With Composting Worms In Your Kitchen"
 date:   2015-05-09 19:02:57
-categories: soil
+categories: food
 tags: homesteading composting
 img: 'living-with-composting-worms/kitchen_view.jpg'
 img_thumb: 'living-with-composting-worms/thumb.jpg'

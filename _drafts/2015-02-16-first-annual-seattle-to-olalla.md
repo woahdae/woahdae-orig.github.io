@@ -3,7 +3,7 @@ layout: post
 title:  "Exploring Seattle's Award-Winning Bike Network"
 subtitle: "An Improvised Trip From Seattle to Olalla"
 date:   2015-02-16 19:02:57
-categories: bikes
+category: bikes
 tags: biking
 img: 'first-annual-seattle-to-olalla/route.jpg'
 img_thumb: 'first-annual-seattle-to-olalla/thumb.jpg'

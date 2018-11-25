@@ -42,8 +42,12 @@
   }
 }
 
-.sidebar {
-  background-color: #b9c9d0;
+.sidebar-extra {
+  display: block;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 /* About section */

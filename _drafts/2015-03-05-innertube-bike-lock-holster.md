@@ -2,7 +2,7 @@
 layout: post
 title:  "Introducing The Amazing Inner-Tube U-Lock Holster"
 date:   2015-03-05 19:02:57
-categories: bikes
+category: bikes
 tags: biking diy review
 img: 'innertube-lock-holster/rubber-holster.jpg'
 img_thumb: 'innertube-lock-holster/thumb.jpg'
