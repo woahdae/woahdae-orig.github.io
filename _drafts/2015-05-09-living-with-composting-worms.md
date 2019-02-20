@@ -2,7 +2,7 @@
 layout: post
 title:  "Living With Composting Worms In Your Kitchen"
 date:   2015-05-09 19:02:57
-categories: food
+category: food
 tags: homesteading composting
 img: 'living-with-composting-worms/kitchen_view.jpg'
 img_thumb: 'living-with-composting-worms/thumb.jpg'
@@ -13,6 +13,14 @@ vermicomposting hobby turned out to be one of the easiest and most
 rewarding ways to stay connected with nature while still living in
 apartments.'
 ---
+
+### Update: Mar 1, 2019
+
+When I wrote this, I was living in a 300 square foot apartment in Capitol Hill. I now live next to a community farm and have lots of room to pursue personal food production, but the indoor worm bin is still one of my favorite kitchen hacks.
+
+I get fruit flies maybe once a year, but it's from leaving food on the counter for a while before composting. Put food straight into the bin under the sink, no countertop bins allowed, and you should be fruit fly free.
+
+-----
 
 I believe personal food production is the simplest path to freedom.
 

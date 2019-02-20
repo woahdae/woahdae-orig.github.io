@@ -1,3 +1,19 @@
+---
+layout: post
+title:  "Minimalisht Vim with NeoVim and Plug"
+date:   2015-05-09 19:02:57
+category: food
+tags: homesteading composting
+img: 'living-with-composting-worms/kitchen_view.jpg'
+img_thumb: 'living-with-composting-worms/thumb.jpg'
+img_alt: "Apartment Worms"
+excerpt: 'Years ago I asked myself what I could do to keep the self-sufficiency
+dream alive while saving up for my homesteading mid-life crisis, and my
+vermicomposting hobby turned out to be one of the easiest and most
+rewarding ways to stay connected with nature while still living in
+apartments.'
+---
+
 I started coding Ruby with TextMate back when TextMate was cool, and
 switched to Vim via Janus while waiting for TextMate 2. Janus provided a
 nice starting point for a TextMate convert - simple like TextMate,
