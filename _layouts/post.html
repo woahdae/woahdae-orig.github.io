@@ -5,7 +5,7 @@ layout: default
 <article>
   <h1 class="title">{{ page.title }}</h1>
   <div class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
     in
     <a href="/{{ page.categories }}">{{ page.categories }}</a>
   </div>
