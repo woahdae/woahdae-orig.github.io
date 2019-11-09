@@ -2,7 +2,7 @@
 layout: post
 title:  "Minimalisht Vim with NeoVim and Plug"
 date:   2015-05-09 19:02:57
-category: food
+category: tech
 tags: homesteading composting
 img: 'living-with-composting-worms/kitchen_view.jpg'
 img_thumb: 'living-with-composting-worms/thumb.jpg'

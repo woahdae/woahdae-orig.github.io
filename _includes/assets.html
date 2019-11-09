@@ -16,3 +16,61 @@
   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
   else window.addEventListener('load', loadDeferredStyles);
 </script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+<script>
+  ;(function() {
+    Flickity.defaults.dragThreshold = 6
+
+    var touchingCarousel = false
+      , touchStartCoords
+
+    document.body.addEventListener('touchstart', function(e) {
+        if (e.target.closest('.carousel-cell')) {
+          touchingCarousel = true
+          touchStartCoords = {
+            x: e.touches[0].pageX,
+            y: e.touches[0].pageY
+          }
+        } else {
+          touchingCarousel = false
+        }
+    })
+
+    document.body.addEventListener('touchmove', function(e) {
+      if (!(touchingCarousel && e.cancelable)) return
+
+      var moveVector = {
+        x: e.touches[0].pageX - touchStartCoords.x,
+        y: e.touches[0].pageY - touchStartCoords.y
+      }
+
+      if (Math.abs(moveVector.x) > Flickity.defaults.dragThreshold)
+        e.preventDefault()
+
+    }, {passive: false})
+
+    // Polyfill for Element.closest
+    // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+    if (!Element.prototype.matches) {
+      Element.prototype.matches =
+        Element.prototype.msMatchesSelector ||
+        Element.prototype.webkitMatchesSelector
+    }
+
+    if (!Element.prototype.closest) {
+      Element.prototype.closest =
+        function(s) {
+          var el = this
+
+          do {
+            if (el.matches(s)) return el
+            el = el.parentElement || el.parentNode
+          } while (el !== null && el.nodeType === 1)
+          return null
+        }
+    }
+  })();
+</script>

@@ -27,7 +27,6 @@ and are often rattly or just poorly designed.
 Well, last summer I went looking for the best way to store my U-Lock
 and eventually found this great handmade product:
 
-
 <div class="panel panel-default linkish-glow">
   <a href="https://www.etsy.com/listing/100067846/bicycle-u-lock-holster-tan-leather"
      target="_blank">

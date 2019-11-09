@@ -385,3 +385,20 @@ blockquote p:last-child {
   }
 }
 
+.main-carousel {
+  margin-bottom: 35px;
+}
+.carousel-cell {
+  width: 500px;
+  height: auto;
+  margin-right: 10px;
+}
+.carousel-cell img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-caption {
+  font-size: small;
+  text-align: center;
+}
+
