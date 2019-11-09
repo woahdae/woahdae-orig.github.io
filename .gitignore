@@ -1,3 +1,5 @@
 _site
 tags
 .sass-cache
+node_modules
+package-lock.json
