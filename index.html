@@ -12,7 +12,7 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
   <article>
-    <a style="position: relative" href="{{ site.baseurl }}{{ post.url }}">
+    <a class="post-title-area" style="position: relative" href="{{ site.baseurl }}{{ post.url }}">
       {% if post.img %}
       <img class="post-image" src="/img/{{ post.img }}" />
       {% endif %}

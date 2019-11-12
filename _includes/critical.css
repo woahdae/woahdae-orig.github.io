@@ -17,28 +17,17 @@ body {
 }
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
   line-height: 1.5;
 }
 
-@media (min-width: 38em) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 58em) {
-  html {
-    font-size: 20px;
-  }
-}
-
 body {
-  color: #515151;
-  background-color: #fff;
+  color: rgba(0,0,0,0.8);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -52,11 +41,19 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: .5rem;
-  font-weight: 600;
+  margin: 3rem 0 1rem 0;
   line-height: 1.25;
-  color: #313131;
   text-rendering: optimizeLegibility;
+  font-weight: 600;
+  color: #d93c3c;
+}
+
+.title {
+  color: #313131;
+}
+
+strong {
+  font-weight: 600;
 }
 
 h1 {
@@ -64,20 +61,19 @@ h1 {
 }
 
 h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 ul,
 ol,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .lead {
@@ -109,7 +105,6 @@ article li+li {
 
 .title,
 .title a {
-  color: #303030;
   margin-top: 0;
 }
 
@@ -233,9 +228,12 @@ article li+li {
   position: absolute;
   bottom: 0;
   left: -0.5rem;
-  color: #fff;
   padding: 10px 5px;
   text-shadow: 0px 0px 5px #000;
+}
+
+.post-title-area:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 48em) {
@@ -245,7 +243,7 @@ article li+li {
 
   .content, body > footer {
     max-width: 40rem;
-    margin-left: 18rem;
+    margin-left: 20rem;
     margin-right: 2rem;
   }
 
@@ -279,7 +277,6 @@ article li+li {
   .title-with-img {
     position: relative;
     left: auto;
-    color: initial;
     padding: 0;
     text-shadow: none;
   }
@@ -369,9 +366,9 @@ body>footer{
 
 blockquote {
   padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5
+  margin: 1.2rem 0;
+  color: #333;
+  border-left: .25rem solid #dc322f;
 }
 
 blockquote p:last-child {

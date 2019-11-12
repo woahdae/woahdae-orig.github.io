@@ -24,3 +24,6 @@ author:
 plugins:
   - jekyll-paginate
   - jekyll-gist
+
+markdown: kramdown
+highlighter: rouge
