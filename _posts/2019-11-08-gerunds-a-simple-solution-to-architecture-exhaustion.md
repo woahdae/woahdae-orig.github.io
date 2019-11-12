@@ -3,9 +3,9 @@ layout: post
 title:  "Gerunds: a simple solution to architecture exhaustion"
 date:   2019-11-08 19:02:57
 category: tech
-img: 'placeholders/900x1200.png'
-img_thumb: 'placeholders/900x1200.png'
-img_alt: 'placeholder'
+img: 'gerunds-a-simple-solution-to-architecture-exhaustion/architecture-monster.jpg'
+img_thumb: 'gerunds-a-simple-solution-to-architecture-exhaustion/architecture-monster.jpg'
+img_alt: 'Architecture monster'
 excerpt: >
   I may not know you, but if you do full stack software engineering, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
 sidebar_extra: >
