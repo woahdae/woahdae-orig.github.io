@@ -6,7 +6,16 @@ category: tech
 img: 'placeholders/900x1200.png'
 img_thumb: 'placeholders/900x1200.png'
 img_alt: 'placeholder'
-excerpt: "In a nutshell, this is about a simple technique I've been enjoying that simplifies architectural issues in Rails projects, allowing you to get that great greenfield development buzz even while working on a mature codebase."
+excerpt: >
+  In their paper introducing DCI, the authors succinctly captured the essence of what I've learned about architecture, "Clean Code," and software craftsmanship in the last decade. We all agree: _modeling behavior as naturally as OOP models structure is easier said than done._
+
+
+
+  This post is about a simple, almost "back to basics" technique I've been experimenting with for a couple years, which I now consider essential for addressing this issue. It's a one-two punch: using gerunds (_-ing_ words) to name system actions, and preferring inheritance over composition as the implementation strategy.
+
+
+
+  I know, I know. It's... different. That's why this post is so long, for what is ultimately a really simple proposal. I assume it'll take some convincing, but hear me out - I think it'll be worth it.
 sidebar_extra: >
   <div class="sidebar-extra">
     <blockquote>
