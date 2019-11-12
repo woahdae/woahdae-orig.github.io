@@ -30,6 +30,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  width: 100%;
+}
+
+.img-caption {
+  font-size: small;
+  font-style: oblique;
+  width: 100%;
+  text-align: right;
+  position: relative;
+  top: -1.5rem;
+}
+
 a {
   color: #268bd2;
   text-decoration: none;

@@ -6,7 +6,7 @@
     <div class="sidebar-about">
       <h1><a href="{{ homeurl }}" title="Home">{{ site.title }}</a></h1>
       <nav class="sidebar-nav lead">
-        {% assign sections = "bikes,food,tech,etc" | split: ',' %}
+        {% assign sections = "bikes,tech,food,etc" | split: ',' %}
         {% for section in sections %}
           <a class="sidebar-nav-item{% if page.category == section %} active{% endif %}"
             href="/{{ section }}">
