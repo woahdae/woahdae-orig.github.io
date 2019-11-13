@@ -30,10 +30,14 @@ layout: default
 
 <hr />
 
-<applause-button id="applause-button" style="width: 58px; height: 58px;">
-</applause-button>
+<div class="feedback-buttons">
+  <applause-button id="applause-button" style="width: 58px; height: 58px;">
+  </applause-button>
 
-<hr />
+  {% include sharing_buttons.html path=page.url%}
+
+  <hr />
+</div>
 
 <div class="commentbox"></div>
 
