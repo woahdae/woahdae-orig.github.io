@@ -402,11 +402,11 @@ So inheritance is bad at dynamic behavior and sharing code, probably other thing
 
 Not just to make it work initially, but to communicate my intent clearly to my future self and others long after the use case is top of mind.
 
-For example, this could be logic for registering a `User`, whether as part of a registration wall, a sub-feature that needs to include a registration step, an admin area that can create registered users, or an API. The core `User` definitely doesn't need to know how registration works, but why not a behavior-specific subclass?
+For example, this could be logic for registering a `User`, whether as part of a registration wall, a sub-feature that needs to include a registration step, an admin area that can create registered users, or an API. The core `User` definitely doesn't need to know how registration works, but why not `User::Registering`?
 
-Or this could be helpers for displaying a `Schedule`, maybe in an email, web page, or a JSON API. `Schedule` doesn't need to always carry display-specific bloat around, but when you need it, it feels natural for the schedule to temporarily dress for the role.
+Or this could be helpers for displaying a `Schedule`, maybe in an email, web page, or a JSON API. `Schedule` doesn't need to always carry display-specific bloat around, but when you need it, it feels natural for the schedule to temporarily dress for the role via `Schedule::Viewing`.
 
-**Considering all this, I'm proposing object extensions that are behavior-specific and throw-away by design. They clearly communicate no intent to be pillars of extensibility or reuse, and cannot be hot-swapped mid stream. For that non compromise, we get to reclaim the intuitive expressiveness of inheritance for coding our use cases.**
+**I'm proposing object extensions that are behavior-specific and throw-away by design. They clearly communicate no intent to be pillars of extensibility or reuse, and cannot be hot-swapped mid stream. For that non compromise, we get to reclaim the intuitive expressiveness of inheritance for coding our use cases.**
 
 ##### Question from the audience: can gerunds share behavior?
 
