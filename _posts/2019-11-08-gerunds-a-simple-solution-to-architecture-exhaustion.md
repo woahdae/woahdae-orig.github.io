@@ -58,7 +58,7 @@ So, they proposed a fix that looks like this:
 ![DCI](/img/gerunds-a-simple-solution-to-architecture-exhaustion/dci.jpg)
 <div class="img-caption">The DCI Architecture: A New Vision of Object-Oriented Programming</div>
 
-I actually think DCI is really smart, but... yikes. DCI could probably handle any level of complexity, which is a good tool to have in your pocket. Though if you just want to put a bit of registration logic somewhere other than User, it's not worth pulling in all that extra jargon. I don't need a `Context` to manage a `Role` to extend the `User` so it can participate in a registration `Interaction`, there's just got to be a more natural way.
+I actually think DCI is really smart, but... yikes. DCI could probably handle any level of complexity, which is a good tool to have in your pocket. Though if you just want to put a bit of registration logic somewhere other than User, it's not worth pulling in all that extra jargon. I don't need a `Context` to manage a `Role` to extend the `User` so it can participate in a registration `Interaction` - there's just got to be a more natural way.
 
 This post is about a simple technique I've been experimenting with for a couple years that can serve as the step prior to adopting [DCI](https://en.wikipedia.org/wiki/Data,_context_and_interaction), [Clean Architecture](https://www.youtube.com/watch?v=Nsjsiz2A9mg), [Trailblazer](http://trailblazer.to/), or the like. This technique might scale just as well or better, actually, but I haven't tried it for _that_ long so I won't presume.
 
