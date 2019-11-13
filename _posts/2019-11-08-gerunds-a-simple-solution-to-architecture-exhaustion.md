@@ -282,7 +282,7 @@ presenter.name
 # Yep, titlized. Now let's try getting some JSON:
 
 presenter.as_json
-#=> {name: "foo", id: 1, path: "todo_items/1"}
+#=> {name: "foo", id: 1, path: "/todo_items/1"}
 
 # OOPS!!! Name is NOT titleized. 😯
 #
@@ -350,10 +350,10 @@ item.name
 #=> "Foo"
 
 item.as_json
-#=> {name: "Foo", id: 1, path: "todo_items/1"}
+#=> {name: "Foo", id: 1, path: "/todo_items/1"}
 
 item.to_json
-#=> %s({"name": "Foo", "id": 1, "path": "todo_items/1"})
+#=> %s({"name": "Foo", "id": 1, "path": "/todo_items/1"})
 ```
 
 We get everything we want, and remove a layer of jargon while we're at it.
