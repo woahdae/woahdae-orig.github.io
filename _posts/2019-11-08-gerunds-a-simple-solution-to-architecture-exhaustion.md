@@ -215,7 +215,7 @@ You don't have to take my word for it yet. Reserve judgment until the end, where
 
 ##### Question from the audience: what's wrong with service objects?
 
-Service objects are top-notch strategy, to be sure. Extracting behavior from a core model to a service object decreases bloat on the core model, which is important for keeping velocity up.
+Service objects are a top-notch strategy, to be sure. Extracting behavior from a core model to a service object decreases bloat on the core model, which is important for keeping velocity up.
 
 They do come with trade-offs though:
 
