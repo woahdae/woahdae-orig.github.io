@@ -386,17 +386,17 @@ Due to the short-lived nature of domain models in Rails' request/response cycle,
 🤔
 </span>
 
-##### Inheritance is bad at code reuse
+##### Inheritance is bad at sharing code
 
 I recently ran across this article, [Goodbye Object-Oriented Programming](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53), which does a good job of highlighting the downsides inheritance (and more). TL;DR complex inheritance hierarchies for sharing code makes for bad times. Go read it if you need convincing, it'll save me some keystrokes.
 
 Unlike that article though, my conclusion isn't to throw away OOP entirely.
 
-I agree with Reenskaug and Coplien when they said objects capture structure well. So, instead of quitting the whole OOP thing and coding our websites in - what then, Haskell? - let's use OOP's strengths for our domain modeling and appropriate alternatives for code reuse.
+I agree with Reenskaug and Coplien when they said objects capture structure well. So, instead of quitting the whole OOP thing and coding our websites in - what then, Haskell? - let's use OOP's strengths for our domain modeling and appropriate alternatives for sharing code.
 
 ##### Inheritance is GREAT at single-purpose extension
 
-So inheritance is bad at dynamic behavior and code reuse, probably other things too. OK, but I don't need highly dynamic behavior in my domain models, and I have lots of other ways to reuse code between objects.
+So inheritance is bad at dynamic behavior and sharing code, probably other things too. OK, but I don't need highly dynamic behavior in my domain models, and I have lots of other ways to reuse code between objects.
 
 **What I do need, every day, is a natural way to translate use cases into code without complicating, breaking, or majorly refactoring whatever I did yesterday.**
 
@@ -618,7 +618,7 @@ To my eye, compared to a Trailblazer operation, this gerund is natural, expressi
 
 This was a long post because I know I'm advocating for a lot of things that should rightfully make you go "hmmmmm." But let's recap.
 
-Continue to avoid inheritance for highly dynamic runtime behavior, code reuse, and anything else you know it's bad at.
+Continue to avoid inheritance for highly dynamic runtime behavior, sharing code, and anything else you know it's bad at.
 
 Also continue to avoid ActiveRecord callbacks on base domain models.
 
