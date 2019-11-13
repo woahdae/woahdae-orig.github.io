@@ -92,8 +92,8 @@ applause-button .count-container {
   left: 50px;
   top: 30%;
 }
-applause-button .count {
-  width: auto;
+applause-button .count-container .count {
+  width: auto !important;
 }
 
 
