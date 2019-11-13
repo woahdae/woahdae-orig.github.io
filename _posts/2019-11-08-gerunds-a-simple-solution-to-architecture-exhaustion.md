@@ -624,9 +624,9 @@ Also continue to avoid ActiveRecord callbacks on base domain models.
 
 _**Do**_ use inheritance for procedural actions relevant to a single domain model, ex. user registration, or context-specific representations like views, emails, forms, etc. threatening to bloat your core models.
 
-Finally, by putting all this under the "gerund" umbrella lets us cover many of these needs naturally, without introducing extra layers of jargon for presenters, form models, service objects, etc.
+Finally, putting all this under the "gerund" umbrella lets us cover many of these needs naturally, without introducing extra layers of jargon for presenters, form models, service objects, etc.
 
-All this with no external dependencies, plus conceptual compatibility with many heavier-weight architectures.
+Aaaaaaand no external dependencies, plus conceptual compatibility with many heavier-weight architectures.
 
 <span style="font-size: 3rem">
 🍻
@@ -649,11 +649,9 @@ Thanks for reading, and I'll see you in the [comments](#commentbox)!
 
 [Growing Rails Applications in Practice](https://leanpub.com/growing-rails)
 
-A few years ago I googled "Growing Rails Applications in Practice" because that'd be the title of the book I might have written, if I was into writing books. Turns out someone else already wrote it, and they had pretty much said what I'd say. Whew!
+The biggest insight from their book was using simple inheritance to implement form models. Previously was using runtime extensions, which is structurally similar, but simple inheritance is even cleaner.
 
-The biggest insight from their book was using simple inheritance to implement form models. I was using runtime extension at the time, which is structurally similar, but simple inheritance is even cleaner.
-
-Its naming conventions didn't do it for me, and the authors use service objects where I'd now use a gerund, but it's a great read. You would be blessed to work on a codebase following all their advice.
+Their naming conventions didn't do it for me, and the authors use service objects where I'd now use a gerund, but it's a great read. You would be blessed to work on a codebase following all their advice.
 
 [ActiveDecorator](https://github.com/amatsuda/active_decorator)
 
@@ -661,11 +659,7 @@ Just a couple days ago I found this decorator project I hadn't seen before. The 
 
 This means you could use `ActiveDecorator` without any of the drawbacks mentioned here, since it's actually implemented with a form of inheritance.
 
-Personally I'm attached to the gerund naming convention now, and `ActiveDecorator` is very view-oriented, but nonetheless a great option.
-
-[My earlier Github project playing with extending behavior](https://github.com/woahdae/transcience)
-
-About when I was adopting Ruby 2.1, I was excited that I might be able to use runtime extensions without a performance penalty, so I did a deep dive into all things related to extending behavior. Measuring performance, sample projects using different decorator gems, writing tests to assert the results in [Avdi Grimm's article on decorators](http://www.virtuouscode.com/2012/01/31/decoration-is-best-except-when-it-isnt/), etc.
+[My Ruby 2.1 project testing object extension](https://github.com/woahdae/transcience)
 
 TL;DR, [decorators will getcha](#hating-on-decorators) and module extension is performant in Ruby >= 2.1.
 
