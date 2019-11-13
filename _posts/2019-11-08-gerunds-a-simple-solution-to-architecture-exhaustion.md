@@ -649,7 +649,7 @@ Thanks for reading, and I'll see you in the [comments](#commentbox)!
 
 [Growing Rails Applications in Practice](https://leanpub.com/growing-rails)
 
-The biggest insight from their book was using simple inheritance to implement form models. Previously was using runtime extensions, which is structurally similar, but simple inheritance is even cleaner.
+The biggest insight from their book was using simple inheritance to implement form models. Previously I was using runtime extensions, which are structurally similar, but simple inheritance is even cleaner.
 
 Their naming conventions didn't do it for me, and the authors use service objects where I'd now use a gerund, but it's a great read. You would be blessed to work on a codebase following all their advice.
 
