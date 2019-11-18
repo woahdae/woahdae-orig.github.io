@@ -167,6 +167,7 @@ article li+li {
 
   .sidebar blockquote {
     color: white;
+    margin-left: initial;
   }
 
   .sidebar cite {
@@ -177,9 +178,6 @@ article li+li {
 
   .sidebar blockquote, .sidebar cite {
     font-size: small;
-  }
-
-  .sidebar blockquote, .sidebar cite {
     padding-right: 4rem;
   }
 }
@@ -380,10 +378,11 @@ body>footer{
 }
 
 blockquote {
-  padding: .5rem 1rem;
-  margin: 1.2rem 0;
+  padding: .2rem 1rem;
+  margin: 1.5rem 0;
   color: #333;
-  border-left: .25rem solid #dc322f;
+  border-left: .10rem solid #dc322f;
+  font-style: italic;
 }
 
 blockquote p:last-child {
@@ -393,7 +392,8 @@ blockquote p:last-child {
 @media (min-width: 30em) {
   blockquote {
     padding-right: 5rem;
-    padding-left: 1.25rem
+    padding-left: 20px;
+    margin-left: -20px;
   }
 }
 
