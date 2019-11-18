@@ -7,7 +7,7 @@ img: 'gerunds-a-simple-solution-to-architecture-exhaustion/architecture-monster.
 img_thumb: 'gerunds-a-simple-solution-to-architecture-exhaustion/architecture-monster.jpg'
 img_alt: 'Architecture monster'
 excerpt: >
-  I may not know you, but if you do full stack software engineering, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
+  I may not know you, but if you do full stack software engineering with OOP frameworks like Rails, Django, and similar, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
 sidebar_extra: >
   <div class="sidebar-extra">
     <blockquote>
@@ -36,7 +36,7 @@ _The following is the more engaging parts from a talk I gave at Seattle.rb promo
 
 ---
 
-I may not know you, but if you do full stack software engineering, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
+I may not know you, but if you do full stack software engineering with OOP frameworks like Rails, Django, and similar, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
 
 To be sure, count yourself lucky if you have good structure in your app; even if it's a bit complex, it's vastly superior to fat controllers or fat models for keeping velocity up.
 
@@ -64,7 +64,7 @@ This post is about a simple technique I've been experimenting with for a couple 
 
 ##### The good news
 
-The good news is you can try it today after nothing more than being convinced. It requires no dependencies or gems, and extremely little buy in. You can do it in a new or existing project within any other structure or framework.
+The good news is you can try it today after nothing more than being convinced. It requires no dependencies or gems, and extremely little buy in. You can do it in a new or existing project within any other structure or framework needing a place for business logic.
 
 As if that wasn't enough, if you ever outgrow it, it will map well to any of the architectures I'll mention. They all have in common a core focus on keeping data "barely smart" while giving first-class support to business logic. You'll have those two pillars, and can map them to your architecture of choice later.
 
