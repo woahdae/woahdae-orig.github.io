@@ -298,3 +298,55 @@ background-color: #FF6600
   top: 0;
 }
 
+.floating-engagement {
+  @media (min-width: 48em) {
+    left: 11em;
+
+    display: block;
+    opacity: 0;
+    position: fixed;
+    width: 3em;
+    top: 3em;
+    background-color: rgba(255,255,255,0.4);
+    padding: 10px 10px 3px 10px;
+    border-radius: 10px 0 0 10px;
+    animation: slidein 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 15s;
+    color: #268bd2;
+    fill: #007ed7;
+    stroke: #007ed7;
+
+    @keyframes slidein {
+      from { left: 14em; opacity: 0; }
+      to { transform: translateX(0%); opacity: 1 }
+    }
+  }
+
+  @media (min-width: 64em) {
+    left: 13em;
+
+    @keyframes slidein {
+      from { left: 16em; opacity: 0; }
+      to { transform: translateX(0%); opacity: 1 }
+    }
+  }
+
+  applause-button .count-container {
+    left: 20px;
+    top: 15%;
+    font-size: small;
+  }
+  applause-button .count-container .count {
+    width: auto !important;
+  }
+}
+
+.floating-engagement-comments-link {
+  color: inherit;
+}
+.floating-engagement-comments-link svg {
+  width: 1.5em;
+  margin-top: 15px;
+}
+

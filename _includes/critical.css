@@ -215,6 +215,10 @@ article li+li {
   }
 }
 
+.floating-engagement {
+  display: none;
+}
+
 .content {
   max-width: 38rem;
   margin-left: auto;
@@ -255,12 +259,12 @@ article li+li {
 
   .content, body > footer {
     max-width: 40rem;
-    margin-left: 20rem;
+    margin-left: 16rem;
     margin-right: 2rem;
   }
 
   .sidebar {
-    width: 16rem;
+    width: 14rem;
   }
 
   .post-image {
@@ -273,10 +277,15 @@ article li+li {
 @media (min-width: 64em) {
   .content, body > footer {
     margin-right: 4rem;
+    margin-left: 20rem;
   }
 
   .social-links svg {
     height: 1.7rem;
+  }
+
+  .sidebar {
+    width: 16rem;
   }
 
   .post-image {
