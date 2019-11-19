@@ -507,7 +507,38 @@ end
 
 &nbsp;
 
-I have lots of other loving examples, but this post is long enough. I think that makes the point.
+##### Actually using the gerunds, aka `becomes`
+
+This is a good opportunity to quickly talk about various ways to instantiate inheritance-based gerunds.
+
+At a minimum, for the above case of registering a user, we could do something like this in a controller:
+
+```@current_user = User::Registering.find([current user id from somewhere])```
+
+Some version of the above should work in any framework using an [Active Record ORM pattern](https://en.wikipedia.org/wiki/Active_record_pattern) for domain models.
+
+Additionally, Rails provides `ActiveRecord::Base#becomes` for upgrading existing objects. This is nice for when something has already instantiated `@current_user` since you can just upgrade it via `@current_user = @current_user.becomes(User::Registering)`
+
+Here's a "based on a true story" controller example:
+
+``` ruby
+class Users::RegistrationController < ApplicationController
+  def create
+    if !@user
+      @user = User::Registering.new
+    elsif @user.anonymous?
+      @user = @user.becomes(User::Registering)
+    end
+
+    @user.attributes = sign_up_params
+
+    if @user.save
+    # [...]
+  end
+end
+```
+
+OK, I have lots of other loving examples, but this post is long enough. I think that makes the point.
 
 Let's switch gears to a comparison of a great off-the-shelf Rails architecture project: [Trailblazer](http://trailblazer.to).
 
