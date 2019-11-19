@@ -300,34 +300,33 @@ background-color: #FF6600
 
 .floating-engagement {
   @media (min-width: 48em) {
-    left: 11em;
+    left: 11rem;
 
     display: block;
     opacity: 0;
     position: fixed;
-    width: 3em;
-    top: 3em;
+    width: 3rem;
+    top: 4rem;
     background-color: rgba(255,255,255,0.4);
     padding: 10px 10px 3px 10px;
     border-radius: 10px 0 0 10px;
     animation: slidein 0.5s;
     animation-fill-mode: forwards;
-    animation-delay: 15s;
     color: #268bd2;
     fill: #007ed7;
     stroke: #007ed7;
 
     @keyframes slidein {
-      from { left: 14em; opacity: 0; }
+      from { left: 14rem; opacity: 0; }
       to { transform: translateX(0%); opacity: 1 }
     }
   }
 
   @media (min-width: 64em) {
-    left: 13em;
+    left: 13rem;
 
     @keyframes slidein {
-      from { left: 16em; opacity: 0; }
+      from { left: 16rem; opacity: 0; }
       to { transform: translateX(0%); opacity: 1 }
     }
   }
