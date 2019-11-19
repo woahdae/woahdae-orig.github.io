@@ -31,16 +31,24 @@ layout: default
 <hr />
 
 <div class="feedback-buttons">
-  <applause-button style="width: 58px; height: 58px;" color="#268bd2" multiclap="true">
+  <applause-button
+    style="width: 58px; height: 58px;"
+    color="#268bd2"
+    multiclap="true"
+    url="{{ site.url }}{{ page.url }}">
   </applause-button>
 
-  {% include sharing_buttons.html path=page.url%}
+  {% include sharing_buttons.html %}
 
   <hr />
 </div>
 
 <div class="floating-engagement">
-  <applause-button style="width: 24px; height: 24px;" color="inherit" multiclap="true">
+  <applause-button
+    style="width: 24px; height: 24px;"
+    color="inherit"
+    multiclap="true"
+    url="{{ site.url }}{{ page.url }}">
   </applause-button>
 
   <a href="#commentbox" class="floating-engagement-comments-link">
