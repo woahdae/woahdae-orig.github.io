@@ -304,7 +304,7 @@ Why doesn't this work as you initially expect?
 
 `TodoItemPresenter#to_json`:
 
-1. calls `super`, which forwards to `TodoItem`
+1. is not defined, so forwards to `TodoItem`
 1. `TodoItem#to_json` calls `TodoItem#as_json` _**not**_ `TodoItemPresenter#as_json`.
 1. There is no 3. It never touches `TodoItemPresenter#as_json` so we get none of our extended functionality.
 
