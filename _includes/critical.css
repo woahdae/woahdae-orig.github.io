@@ -227,6 +227,7 @@ article li+li {
   padding-right: 1rem;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  overflow: hidden;
 }
 
 .post-image {

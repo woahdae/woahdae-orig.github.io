@@ -513,11 +513,17 @@ This is a good opportunity to quickly talk about various ways to instantiate inh
 
 At a minimum, for the above case of registering a user, we could do something like this in a controller:
 
-```@current_user = User::Registering.find([current user id from somewhere])```
+``` ruby
+@current_user = User::Registering.find([current user id from somewhere])
+```
 
 Some version of the above should work in any framework using an [Active Record ORM pattern](https://en.wikipedia.org/wiki/Active_record_pattern) for domain models.
 
-Additionally, Rails provides `ActiveRecord::Base#becomes` for upgrading existing objects. This is nice for when something has already instantiated `@current_user` since you can just upgrade it via `@current_user = @current_user.becomes(User::Registering)`
+Additionally, Rails provides `ActiveRecord::Base#becomes` for upgrading existing objects. This is nice for when something has already instantiated `@current_user` since you can just upgrade it via:
+
+``` ruby
+@current_user = @current_user.becomes(User::Registering)
+```
 
 Here's a "based on a true story" controller example:
 
