@@ -402,8 +402,8 @@ blockquote p:last-child {
 @media (min-width: 30em) {
   blockquote {
     padding-right: 5rem;
-    padding-left: 20px;
-    margin-left: -20px;
+    padding-left: 16px;
+    margin-left: -18px;
   }
 }
 
