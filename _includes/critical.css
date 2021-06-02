@@ -424,3 +424,46 @@ blockquote p:last-child {
   text-align: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #999;
+  }
+
+  .sidebar {
+    background-color: #55717D;
+  }
+
+  .title {
+    color: #D3D3D3;
+  }
+
+  img {
+    opacity: 0.8;
+  }
+
+  .sidebar a {
+    color: #ddd;
+  }
+
+  .social-links svg {
+    fill: #ddd !important;
+  }
+
+  code {
+    color: #93a1a1;
+    background-color: #002b36;
+  }
+
+  strong {
+    color: #D3D3D3 !important;
+  }
+
+  blockquote {
+    color: #888;
+  }
+
+  applause-button .count-container {
+    color: #111 !important;
+  }
+}
