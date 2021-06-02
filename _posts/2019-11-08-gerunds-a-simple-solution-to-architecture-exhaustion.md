@@ -2,12 +2,13 @@
 layout: post
 title:  "Gerunds: a simple solution to architecture exhaustion"
 date:   2019-11-08 19:02:57
+last_modified_at: 2021-06-02 07:00:00
 category: tech
 img: 'gerunds-a-simple-solution-to-architecture-exhaustion/architecture-monster.jpg'
 img_thumb: 'gerunds-a-simple-solution-to-architecture-exhaustion/architecture-monster.jpg'
 img_alt: 'Architecture monster'
 excerpt: >
-  I may not know you, but if you do full stack software engineering with OOP frameworks like Rails, Django, and similar, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
+  If you do backend or full stack software engineering with OOP frameworks like Rails, Django, and similar, I have something I'd like you to try. It's a simple, natural way to express behavior that's either bloating models, or is spread around various architectural components like service objects, form models, presenters, and similar.
 sidebar_extra: >
   <div class="sidebar-extra">
     <blockquote>
@@ -36,13 +37,13 @@ _The following is the more engaging parts from a talk I gave at Seattle.rb promo
 
 ---
 
-I may not know you, but if you do full stack software engineering with OOP frameworks like Rails, Django, and similar, I have something I'd like you to try with me that you might really like. It's a simple, natural way to express a lot of behavior that has been either bloating your models, or has spread around in architectural components like service objects, form models, presenters, and potentially a dozen other architectural widgets.
+If you do backend or full stack software engineering with OOP frameworks like Rails, Django, and similar, I have something I'd like you to try. It's a simple, natural way to express behavior that's either bloating models, or is spread around various architectural components like service objects, form models, presenters, and similar.
 
 To be sure, count yourself lucky if you have good structure in your app; even if it's a bit complex, it's vastly superior to fat controllers or fat models for keeping velocity up.
 
 You have to admit though - wasn't it nice when your app was smaller, and your domain models were just translations of things you'd see in use cases? Sure, `User` had a few long methods, but you didn't have `UserPresenter`, `UserRegistrationService`, and whatever else, all with their own interfaces and implementations to manage, none inspired by delivering customer value.
 
-I mean, transparent domain modeling was the original promise of Model-View-Controller (MVC). You're supposed to just spend energy on translating users' mental models to code - the M - and let VC expose it to the world:
+I mean, transparent domain modeling was the original promise of Model-View-Controller (MVC). You're supposed to spend most of your energy translating users' mental models to code - the M - and let views and controllers expose it to the world:
 
 ![MVC](/img/gerunds-a-simple-solution-to-architecture-exhaustion/mvc.jpg)
 <div class="img-caption">The DCI Architecture: A New Vision of Object-Oriented Programming</div>
@@ -58,9 +59,9 @@ So, they proposed a fix that looks like this:
 ![DCI](/img/gerunds-a-simple-solution-to-architecture-exhaustion/dci.jpg)
 <div class="img-caption">The DCI Architecture: A New Vision of Object-Oriented Programming</div>
 
-I actually think DCI is really smart, but... yikes. DCI could probably handle any level of complexity, which is a good tool to have in your pocket. Though if you just want to put a bit of registration logic somewhere other than User, it's not worth pulling in all that extra jargon. I don't need a `Context` to manage a `Role` to extend the `User` so it can participate in a registration `Interaction` - there's just got to be a more natural way.
+I actually think DCI is really smart, but... yikes. DCI could probably handle any level of complexity, which is a good tool to have in your pocket. If you just want to put a bit of registration logic somewhere other than User, though, it's not worth pulling in all that extra jargon. I don't need a `Context` to manage a `Role` to extend the `User` so it can participate in a registration `Interaction` - there's just got to be a more natural way.
 
-This post is about a simple technique I've been experimenting with for a couple years that can serve as the step prior to adopting [DCI](https://en.wikipedia.org/wiki/Data,_context_and_interaction), [Clean Architecture](https://www.youtube.com/watch?v=Nsjsiz2A9mg), [Trailblazer](http://trailblazer.to/), or the like. This technique might scale just as well or better, actually, but I haven't tried it for _that_ long so I won't presume.
+**This post is about a simple technique I've been experimenting with for a couple years that can serve as the step prior to adopting [DCI](https://en.wikipedia.org/wiki/Data,_context_and_interaction), [Clean Architecture](https://www.youtube.com/watch?v=Nsjsiz2A9mg), [Trailblazer](http://trailblazer.to/), or the like.** This technique might scale just as well or better, actually, but I haven't tried it for _that_ long so I won't presume.
 
 ##### The good news
 
@@ -68,7 +69,7 @@ The good news is you can try it today after nothing more than being convinced. I
 
 As if that wasn't enough, if you ever outgrow it, it will map well to any of the architectures I'll mention. They all have in common a core focus on keeping data "barely smart" while giving first-class support to business logic. You'll have those two pillars, and can map them to your architecture of choice later.
 
-Finally, the technique should apply to many if not all OOP languages. Even though all the examples are for Ruby on Rails, and the post assumes familiarity with both Ruby and Rails, "where do I put my business logic" is a fairly common OOP issue (see ex. [this Django post on service objects](https://mitchel.me/2017/django-service-objects/)).
+Finally, the technique should apply to many if not all OOP languages. Even though all the examples are for Ruby on Rails, and this post assumes familiarity with both Ruby and Rails, "where do I put my business logic" is a fairly common OOP issue (see ex. [this Django post on service objects](https://mitchel.me/2017/django-service-objects/)).
 
 ##### The "bad" news
 
@@ -388,7 +389,7 @@ Due to the short-lived nature of domain models in Rails' request/response cycle,
 
 ##### Inheritance is bad at sharing code
 
-I recently ran across this article, [Goodbye Object-Oriented Programming](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53), which does a good job of highlighting the downsides inheritance (and more). TL;DR complex inheritance hierarchies for sharing code makes for bad times. Go read it if you need convincing, it'll save me some keystrokes.
+I recently ran across this article, [Goodbye Object-Oriented Programming](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53), which does a good job of highlighting the downsides of inheritance (and more). TL;DR complex inheritance hierarchies for sharing code makes for bad times. Go read it if you need convincing, it'll save me some keystrokes.
 
 Unlike that article though, my conclusion isn't to throw away OOP entirely.
 
@@ -716,7 +717,16 @@ module Gerund
     delegate :model_name,
       :sti_name,
       :finder_needs_type_condition?,
+      :_to_partial_path,
       to: :superclass
   end
+
+  # GlobalID depends on the model to get class_name, rather than passing
+  # it in directly. Maybe someday we can try to get GlobalID to be easier
+  # to work with in this way; until then, this works.
+  def to_global_id(*args)
+    becomes(self.class.superclass).to_global_id(*args)
+  end
+  alias :to_gid :to_global_id
 end
 ```

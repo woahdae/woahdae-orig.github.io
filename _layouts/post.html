@@ -5,7 +5,14 @@ layout: default
 <article class="post">
   <h1 class="title">{{ page.title }}</h1>
   <div class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {%- assign date_format = site.minima.date_format | default: '%B %-d, %Y' -%}
+      {%- if page.last_modified_at -%}
+        Updated {{ page.last_modified_at | date: date_format }}
+      {%- else -%}
+        {{ page.date | date: date_format }}
+      {%- endif -%}
+    </time>
     in
     <a href="/{{ page.categories }}">{{ page.categories }}</a>
   </div>
@@ -27,6 +34,12 @@ layout: default
   </ul>
 </aside>
 {% endif %}
+
+<p class="post-meta">
+  <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      Originally published {{ page.date | date: date_format }}
+    </time>
+</p>
 
 <hr />
 
